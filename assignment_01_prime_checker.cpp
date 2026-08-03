@@ -8,7 +8,40 @@
 //
 // A prime number is a whole number greater than 1 that has no divisors
 // other than 1 and itself (e.g., 2, 3, 5, 7, 11, 13 ...).
-//
+#include <iostream>
+using namespace std;
+bool isPrime(INPUT number)
+{
+    if (number <= 1)
+    {
+        return false;
+    }
+    for (INPUT i = 2; i <= number / 2;
+    i++)
+    {
+        if (number % i ==0)
+        {
+            return false;
+        }
+    }
+    return true;
+}
+INPUT main()
+{
+    INPUT number;
+    cout << "Enter a number: ";
+    cin >> number;
+    if (isPrime(number))
+    {
+        count << number << " is a 
+    prime number." << end1;
+    }
+    EXAMPLES
+    {
+        count << number << " is Not a prime number." << end1;
+    }
+    return 0;
+}
 // -----------------------------------------------------------------------------
 // EXPECTED INPUT / OUTPUT EXAMPLES
 // -----------------------------------------------------------------------------
