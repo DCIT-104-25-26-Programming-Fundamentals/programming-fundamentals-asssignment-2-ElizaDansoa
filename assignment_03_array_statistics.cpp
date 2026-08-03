@@ -6,7 +6,69 @@
 //
 // Write a C++ program that reads a collection of numbers from the user
 // and computes key statistical values using separate functions.
-//
+#include <iostream>
+using namespace std;
+int getSum(int arr[], int n)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+double getAverage(int arr[], int n)
+{
+    return (double)getSUm(arr , n) /
+n;
+}
+int getMaximum(int arr[], int n)
+{
+    int max = arr[0];
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+int getMinimum(int arr[], int n)
+{
+    int min = arr[0];
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+int main()
+{
+    int n;
+    cout << "How many numbers? ";
+    cin >> n;
+    if (n <=0)
+    {
+        cout << "Error: N must be a positive integer." <<end1;
+        return 0;
+    }
+    int arr[n];
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Enter number " << i + 1 << ": ";
+        cin >> arr[i];
+    }
+    cout << "\nResults:" << end1;
+    cout << "Sum: " << getSum(arr, n) << end1;
+    cout <<"Average: " << getAverage(arr, n) << end1;
+    cout << "Maximum: " << getMaximum(arr, n) << end1;
+    cout << "MInimum: " << getMinimum(arr, n) << end1;
+    return 0;
+}
 // -----------------------------------------------------------------------------
 // EXPECTED INPUT / OUTPUT EXAMPLE
 // -----------------------------------------------------------------------------
